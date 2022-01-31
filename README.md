@@ -1,2 +1,2 @@
 # bankruptcy-trees-bagging-boosting
- # EDA of Bankruptcy Data and Building SVM, Logit, and Naive Bayes Models
+# EDA of Bankruptcy Data and Building Random Forest, Gradient Boosted Trees, and Extra Trees
