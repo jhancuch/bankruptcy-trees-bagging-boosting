@@ -19,7 +19,7 @@ I additionally utilize both a dataset containing all the variables and a second 
 | Validation (1) Recall | 0.05 | 0.03 | 0.16 | 0.05 | 0.05 | 0.03 |
 | Validation (1) F1-Score | 0.09 | 0.05 | 0.24 | 0.09 | 0.10 | 0.05 |
 | Validation (0) Precision | 0.97 | 0.97 | 0.98 | 0.97 | 0.97 | 0.97 |
-| Validation (0) Recall | 1.00 | 1.00 | 0.99 | | 1.00 | 1.00 |
+| Validation (0) Recall | 1.00 | 1.00 | 0.99 | 1.00 | 1.00 | 1.00 |
 | Validation (0) F1-Score | 0.99 | 0.98 | 0.99 | 0.98 | 0.99 | 0.99 |
 
 Overall, the run-away winner was the Gradient Boosted Trees tuned model fitted to the subset of the data. Its precision was 54%, recall 19% and had an f1-score of .28. Of all the classification models over I've examined over the course of two weeks, this one performed the best.
