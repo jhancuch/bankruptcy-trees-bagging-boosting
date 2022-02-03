@@ -11,7 +11,7 @@ I additionally utilize both a dataset containing all the variables and a second 
 
 ## Results and evaluation
 | Metric | Random Forest (full) | Random Forest (subset) | Gradient Boosted Trees (full) | Gradient Boosted Trees (subset) | Extra Trees (full) | Extra Trees (subset) |
-|---     | --- | ---   | ---     | --- | ---     |
+|---     | ---                  | ---                    | ---                           | ---                             | ---                | ---                  |
 | Validation Accuracy | 0.97 | 0.97 | 0.97 | 1.00 | 0.97 | 0.97 |
 | Validation TPR | 0.05 | 0.03 | 0.16 | 0.05 | 0.05 | 0.03 |
 | Validation TNR | 1.00 | 1.00 | 0.99 | 0.97 | 1.00 | 1.00 |
@@ -22,7 +22,7 @@ I additionally utilize both a dataset containing all the variables and a second 
 | Validation (0) Recall | 1.00 | 1.00 | 0.99 | | 1.00 | 1.00 |
 | Validation (0) F1-Score | 0.99 | 0.98 | 0.99 | 0.98 | 0.99 | 0.99 |
 
-Overall, the model development was underwhelming. Between SVM, Logit, and the Complement Naive Bayes, Logit is the best model. Complement Naive Bayes takes itself out of the running with its ppor precision and recall of bankrupt firms. Logit narrowly beats out SVM due to its marginal increase in precision and recall for bankrupt firms and a only 1% decline in recall of non-bankrupt firms compared to SVM. We also see that Logit has the highest F1-Score for bankrupt firms and non-bankrupt firms.
+Overall, the run-away winner was the Gradient Boosted Trees tuned model fitted to the subset of the data. Its precision was 54%, recall 19% and had an f1-score of .28. Of all the classification models over I've examined over the course of two weeks, this one performed the best.
 
 ## Discusion
-A potential area of improvement lies in variable selection. No variable selection was utilized but potentially using correlation heat maps and a random forest based algorithm to determine the importance of each variable could prove useful. Potentially the models have too much noise with extraneous variables leading to less than optimal outcomes.
+The Extra Trees model fitted on the full dataset could have uses. With its precision of 100% and recall of 5%, while it has lots of false negatives, it has no false positives meaning it is conservative with predicting a 1 value. This could be used by individuals trading to avoid any companies that the model predict as going bankrupt due to the near certainty the model provides. It can also provide more assurance with bond discount trading.
